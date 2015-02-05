@@ -40,4 +40,9 @@ class PlatformHelper
     {
         return getOsName().equals( "windows" )
     }
+
+    static boolean isCygwin()
+    {
+        return "cygwin".equals(System.getenv("TERM"))
+   }
 }

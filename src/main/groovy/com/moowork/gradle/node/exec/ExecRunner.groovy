@@ -34,7 +34,7 @@ abstract class ExecRunner
         def realExec = exec
         def realArgs = args
 
-        if ( this.variant.windows )
+        if ( this.variant.windows && !this.variant.cygwin )
         {
             realExec = 'cmd'
             realArgs = ['/c', exec] + args

@@ -19,6 +19,7 @@ class VariantBuilder
 
         def variant = new Variant()
         variant.windows = PlatformHelper.isWindows()
+        variant.cygwin = PlatformHelper.isCygwin()
         variant.nodeDir = getNodeDir( osName, osArch )
         variant.nodeBinDir = new File( variant.nodeDir, 'bin' )
 
